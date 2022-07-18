@@ -1,4 +1,5 @@
 module.exports = function check(str, bracketsConfig) {
+  if (str.length % 2) return false;
   const bracketPairs = Object.fromEntries(bracketsConfig);
   let openBrackets = [];
   for (let i = 0; i < bracketsConfig.length; i++){
